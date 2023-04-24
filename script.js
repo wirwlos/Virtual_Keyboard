@@ -180,5 +180,8 @@ letters.forEach((letter) => {
     }
     //we add the clicked key to our display
     display.innerHTML += keyName;
+    if(display.innerHTML.length==31||display.innerHTML.length==66 ||display.innerHTML.length==101){
+        display.innerHTML+="<br>"
+    }
   });
 });
