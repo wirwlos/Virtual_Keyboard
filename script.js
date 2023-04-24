@@ -13,9 +13,11 @@ const space=document.querySelector('.space');
 let isCapsLockOn = false;
 //by slice function, we delete one letter/character from display
 backspace.addEventListener("click", () => {
-  const text = display.innerHTML;
+  let text = display.innerHTML;
+  text = text.replace(/&lt;/g, '<').replace(/&gt;/g, '>');
   display.innerHTML = text.slice(0, -1);
 });
+
 //changing content after clickin "shift" or "capslock" and capitalizing letters
 //i know its not clean but it works ¯\_(ツ)_/¯
 shiftButtons.forEach(button => {
